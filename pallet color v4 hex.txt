@@ -1,0 +1,60 @@
+--color-copperwood-50: #fdf3e7;
+--color-copperwood-100: #fce8cf;
+--color-copperwood-200: #f9d09f;
+--color-copperwood-300: #f6b96f;
+--color-copperwood-400: #f3a23f;
+--color-copperwood-500: #f08b0f;
+--color-copperwood-600: #c06f0c;
+--color-copperwood-700: #905309;
+--color-copperwood-800: #603706;
+--color-copperwood-900: #301c03;
+--color-copperwood-950: #221302;
+
+--color-golden-orange-50: #fff6e6;
+--color-golden-orange-100: #feeecd;
+--color-golden-orange-200: #fddc9b;
+--color-golden-orange-300: #fdcb68;
+--color-golden-orange-400: #fcba36;
+--color-golden-orange-500: #fba904;
+--color-golden-orange-600: #c98703;
+--color-golden-orange-700: #976502;
+--color-golden-orange-800: #644302;
+--color-golden-orange-900: #322201;
+--color-golden-orange-950: #231801;
+
+--color-rich-mahogany-50: #fbebea;
+--color-rich-mahogany-100: #f7d8d4;
+--color-rich-mahogany-200: #efb0a9;
+--color-rich-mahogany-300: #e7897e;
+--color-rich-mahogany-400: #de6254;
+--color-rich-mahogany-500: #d63a29;
+--color-rich-mahogany-600: #ab2f21;
+--color-rich-mahogany-700: #812318;
+--color-rich-mahogany-800: #561710;
+--color-rich-mahogany-900: #2b0c08;
+--color-rich-mahogany-950: #1e0806;
+
+--color-rich-mahogany-50: #fee7e6;
+--color-rich-mahogany-100: #fdcfce;
+--color-rich-mahogany-200: #fba09d;
+--color-rich-mahogany-300: #fa706b;
+--color-rich-mahogany-400: #f8403a;
+--color-rich-mahogany-500: #f61109;
+--color-rich-mahogany-600: #c50d07;
+--color-rich-mahogany-700: #940a05;
+--color-rich-mahogany-800: #620704;
+--color-rich-mahogany-900: #310302;
+--color-rich-mahogany-950: #220201;
+
+--color-espresso-50: #f6eeee;
+--color-espresso-100: #eededd;
+--color-espresso-200: #dcbcbc;
+--color-espresso-300: #cb9b9a;
+--color-espresso-400: #ba7978;
+--color-espresso-500: #a85857;
+--color-espresso-600: #874645;
+--color-espresso-700: #653534;
+--color-espresso-800: #432323;
+--color-espresso-900: #221211;
+--color-espresso-950: #180c0c;
+
