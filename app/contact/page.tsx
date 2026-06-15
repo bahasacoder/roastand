@@ -9,16 +9,7 @@ import Image from "next/image";
          event.preventDefault();
          const formData = new FormData(event.currentTarget);
          const data = Object.fromEntries(formData.entries());
-         console.log("Form Data:", data);
-      };
-  
-      // Attach event listener
-      document.addEventListener('click', handleClick);
-  
-      // Cleanup
-      return () => {
-        // Remove event listener on component unmount
-        document.removeEventListener('click', handleClick);
+         console.log("Form Data:", data);      
       };
     }, []); // Empty dependency array ensures this effect runs only once on mount
   
