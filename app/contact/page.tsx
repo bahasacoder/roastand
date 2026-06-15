@@ -4,7 +4,7 @@ import Image from "next/image";
 
   useEffect(() => {
       // Attach event handlers here
-      const handleClick = () => {
+      const handleClick = (event: React.FormEvent<HTMLFormElement>) => {
         // Handle click
          event.preventDefault();
          const formData = new FormData(event.currentTarget);
