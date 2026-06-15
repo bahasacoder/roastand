@@ -2,9 +2,9 @@ import Image from "next/image";
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const data = Object.fromEntries(formData.entries());
-    console.log("Form Data:", data);
+   //  const formData = new FormData(event.currentTarget);
+   //  const data = Object.fromEntries(formData.entries());
+   //  console.log("Form Data:", data);
   }
 export default function ContactUs() {
   return (
