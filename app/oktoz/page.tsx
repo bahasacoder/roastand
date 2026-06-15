@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getJsonFile, updateJsonFile } from './actions';
+import { getJsonFile, updateJsonFile } from '.../actions';
 
 export default function JsonEditor() {
   const [jsonText, setJsonText] = useState('');
