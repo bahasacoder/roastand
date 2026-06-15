@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-  useEffect(() => {
       // Attach event handlers here
       const handleClick = (event: React.FormEvent<HTMLFormElement>) => {
         // Handle click
@@ -11,7 +10,6 @@ import Image from "next/image";
          const data = Object.fromEntries(formData.entries());
          console.log("Form Data:", data);      
       };
-    }, []); // Empty dependency array ensures this effect runs only once on mount
   
 export default function ContactUs() {
   return (
