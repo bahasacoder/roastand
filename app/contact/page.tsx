@@ -1,11 +1,25 @@
 import Image from "next/image";
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-   //  const formData = new FormData(event.currentTarget);
-   //  const data = Object.fromEntries(formData.entries());
-   //  console.log("Form Data:", data);
-  }
+  useEffect(() => {
+      // Attach event handlers here
+      const handleClick = () => {
+        // Handle click
+         event.preventDefault();
+         const formData = new FormData(event.currentTarget);
+         const data = Object.fromEntries(formData.entries());
+         console.log("Form Data:", data);
+      };
+  
+      // Attach event listener
+      document.addEventListener('click', handleClick);
+  
+      // Cleanup
+      return () => {
+        // Remove event listener on component unmount
+        document.removeEventListener('click', handleClick);
+      };
+    }, []); // Empty dependency array ensures this effect runs only once on mount
+  
 export default function ContactUs() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -16,7 +30,7 @@ export default function ContactUs() {
         <p className="mt-3 text-2xl text-center sm:text-left">
           We would love to hear from you! Please fill out the form below to get in touch with us.
         </p>
-        <form onSubmit={handleSubmit} className="w-full mt-10">
+        <form onClick={handleClick} className="w-full mt-10">
           <div className="mb-6">
             <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label>
             <input type="text" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John Doe" required />
