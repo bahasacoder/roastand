@@ -27,9 +27,10 @@ export default function JsonEditor() {
   }, []);
   */
   // Handle saving the edited text
-  /*
+  
   const handleSave = async () => {
     setStatus('💾 Saving changes...');
+    /*
     try {
       // Validate that the user typed proper JSON syntax
       const parsedJson = JSON.parse(jsonText);
@@ -49,8 +50,9 @@ export default function JsonEditor() {
         setStatus('❌ Error saving changes to GitHub.');
       }
     }
+    */
   };
-*/
+
   if (loading) return <div style={{ padding: '20px' }}>Loading JSON from GitHub...</div>;
 
   return (
