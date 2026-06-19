@@ -31,14 +31,15 @@ export default function JsonEditor() {
     try {
       // Validate that the user typed proper JSON syntax
       const parsedJson = JSON.parse(jsonText);
-/*      
-      const result = await updateJsonFile(parsedJson, sha);
-      if (result.success) {
-        setStatus('✅ Successfully updated file in GitHub!');
-        // Refresh the file data to get the new SHA hash
-        const freshData = await getJsonFile();
-        setSha(freshData.sha);
+      /*     
+        const result = await updateJsonFile(parsedJson, sha);
+        if (result.success) {
+          setStatus('✅ Successfully updated file in GitHub!');
+          // Refresh the file data to get the new SHA hash
+          const freshData = await getJsonFile();
+          setSha(freshData.sha);
       }
+      */
     } catch (err) {
       if (err instanceof SyntaxError) {
         setStatus('❌ Invalid JSON syntax. Please check your brackets/commas.');
@@ -47,7 +48,7 @@ export default function JsonEditor() {
       }
     }
   };
-*/
+
   if (loading) return <div style={{ padding: '20px' }}>Loading JSON from GitHub...</div>;
 
   return (
