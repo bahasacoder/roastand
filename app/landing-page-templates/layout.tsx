@@ -16,6 +16,7 @@ export default function LPTemplatesLayout({
       className={`h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <h1>Landing Page Templates</h1>
           {children}
       </body>
     </html>
