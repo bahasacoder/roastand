@@ -31,7 +31,7 @@ export default function JsonEditor() {
     try {
       // Validate that the user typed proper JSON syntax
       const parsedJson = JSON.parse(jsonText);
-      
+/*      
       const result = await updateJsonFile(parsedJson, sha);
       if (result.success) {
         setStatus('✅ Successfully updated file in GitHub!');
@@ -47,7 +47,7 @@ export default function JsonEditor() {
       }
     }
   };
-
+*/
   if (loading) return <div style={{ padding: '20px' }}>Loading JSON from GitHub...</div>;
 
   return (
