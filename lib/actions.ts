@@ -47,4 +47,3 @@ export async function updateJsonFile(newContent, sha) {
     throw new Error('Failed to update JSON file.');
   }
 
-
