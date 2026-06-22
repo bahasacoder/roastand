@@ -1,4 +1,6 @@
 'use client';
+import { Octokit } from '@octokit/rest';
+const octokit = new Octokit({ auth: gitubToken });
 
 import { useState, useEffect } from 'react';
 // import { getJsonFile, updateJsonFile } from '@/lib/actions';
@@ -9,6 +11,16 @@ export default function JsonEditor() {
   const [loading, setLoading] = useState(true);
   const [status, setStatus] = useState('');
 
+  const { data } = await octokit.rest.repos.getContent({
+  mediaType: {
+    format: "raw",
+  },
+  owner: "bahasacoder",
+  repo: "roastand",
+  path: "db/items.json",
+});
+console.log("package title: %s", JSON.parse(data).title);
+  
   // Load the JSON data when the page opens
   /*
   useEffect(() => {
