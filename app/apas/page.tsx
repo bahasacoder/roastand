@@ -36,8 +36,14 @@ async function fetchInternalJson() {
 
 
 export default function apasOctoPage() {
-  fetchInternalJson();
-  return ()
+  const ambitFetch = fetchInternalJson();
+  return (
+    <>
+      <div>
+        Octos Apas Page
+      </div>
+    </>
+  )
 }
 
 
