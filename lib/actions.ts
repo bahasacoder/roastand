@@ -6,7 +6,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const owner = process.env.GITHUB_OWNER;
 const repo = process.env.GITHUB_REPO;
 const path = process.env.GITHUB_FILE_PATH;
-/* ****
+
 // Fetch the JSON file content and its unique SHA blob ID
 export async function getJsonFile() {
   try {
@@ -45,5 +45,5 @@ export async function updateJsonFile(newContent, sha) {
     console.error('Error updating file:', error);
     throw new Error('Failed to update JSON file.');
   }
-}
-*/
+
+
