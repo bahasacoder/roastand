@@ -1,11 +1,12 @@
 'use server';
 
 import { Octokit } from '@octokit/rest';
+const gitubToken = "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"
+const octokit = new Octokit({ auth: gitubToken });
 
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-const owner = process.env.GITHUB_OWNER;
-const repo = process.env.GITHUB_REPO;
-const path = process.env.GITHUB_FILE_PATH;
+const owner = "bahasacoder" // process.env.GITHUB_OWNER;
+const repo = "roastand" //process.env.GITHUB_REPO;
+const path = "db/item.json" //process.env.GITHUB_FILE_PATH;
 
 // Fetch the JSON file content and its unique SHA blob ID
 export async function getJsonFile() {
