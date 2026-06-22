@@ -5,7 +5,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 export default async function oktozPage() {
 
 
-  const { data } = await octokit.rest.repos.getContent({
+  const response = await octokit.rest.repos.getContent({
   mediaType: {
     format: "raw",
   },
