@@ -13,7 +13,8 @@ export default async function oktozPage() {
   repo: "roastand",
   path: "db/items.json",
 });
-console.log("package title: %s", JSON.parse(data).title);
+  //, JSON.parse(data).title
+console.log("package title: %s");
   
  return (
    <>
