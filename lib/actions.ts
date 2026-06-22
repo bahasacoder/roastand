@@ -11,7 +11,7 @@ const path = "db/item.json" //process.env.GITHUB_FILE_PATH;
 // Fetch the JSON file content and its unique SHA blob ID
 export async function getJsonFile() {
   try {
-    const { data } = await octokit.repos.getContent({ owner, repo, path });
+    const { data } = await octokit.rest.repos.getContent({ owner, repo, path });
     
     // GitHub returns file content as a base64 encoded string
     const contentString = Buffer.from(data.content, 'base64').toString('utf-8');
