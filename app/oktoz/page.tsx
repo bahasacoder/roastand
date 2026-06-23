@@ -15,10 +15,11 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
     });
 
     // 3. Parse the plain text string into a JSON object
-    const jsonObject = JSON.parse(data);
-    console.log("Successfully fetched JSON data:", jsonObject);
+    //const jsonObject = JSON.parse(data);
+  // , jsonObject
+    console.log("Successfully fetched JSON data:");
     
-    return jsonObject;
+   // return jsonObject;
   } catch (error) {
     console.error("Error fetching or parsing JSON file:", error.message);
   }
