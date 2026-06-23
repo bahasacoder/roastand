@@ -13,7 +13,7 @@ export default async function getRepositoryData() {
       path: "db/items.json"
     });
 
-    console.log(`Repo Name: ${data.repo}`);
+    console.log(`Repo Name: `);
   } catch (error) {
     console.error(`Error fetching data`);
   }
