@@ -1,42 +1,24 @@
-import { Octokit } from '@octokit/rest';
+import { Octokit } from "octokit";
 
+// Initialize client
+const octokit = new Octokit({ 
+  auth:  process.env.GITHUB_TOKEN
+});
 
-export default async function oktozPage() {
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-
-    const { data } = await octokit.rest.repos.getContent({
+async function getRepositoryData() {
+  try {
+    // Fetch information for a specific repository
+    const { data } = await octokit.rest.repos.get({
       owner: "bahasacoder",
-      repo: "roastand",
-     path: "db/items.json",
-      mediaType: {
-        format: "raw", // Crucial: forces GitHub to return raw file content text instead of base64
-      },
+      repo: "reastand",
     });
 
-    console.log("Successfully fetched JSON data:");
- return (
-     <>
-         <div>Octoz Page</div>
-     </>
- )
-}    
- /*
-  const response = await octokit.rest.repos.getContent({
-    mediaType: {
-      format: "raw",
-    },
-    owner: "bahasacoder",
-    repo: "roastand",
-    path: "database.json",
-  });
-  
-   //, JSON.parse(data).title
-  console.log("package title: %s");
-    
+    console.log(`Repo Name: ${data.name}`);
+    console.log(`Description: ${data.description}`);
+    console.log(`Stars: ${data.stargazers_count}`);
+  } catch (error) {
+    console.error(`Error fetching data: ${error.message}`);
+  }
+}
 
-*/
-
-
-
-
-
+getRepositoryData();
