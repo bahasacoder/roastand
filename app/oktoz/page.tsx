@@ -5,7 +5,7 @@ const octokit = new Octokit({
   auth:  process.env.GITHUB_TOKEN
 });
 
-async function getRepositoryData() {
+export default async function getRepositoryData() {
   try {
     // Fetch information for a specific repository
     const { data } = await octokit.rest.repos.get({
@@ -19,6 +19,9 @@ async function getRepositoryData() {
   } catch (error) {
     console.error(`Error fetching data: ${error.message}`);
   }
+  return (
+    <><div>OctoKit Page</div></>
+  )
 }
 
-getRepositoryData();
+// getRepositoryData();
