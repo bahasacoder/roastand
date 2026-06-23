@@ -13,11 +13,9 @@ export default async function getRepositoryData() {
       repo: "reastand",
     });
 
-    console.log(`Repo Name: ${data.name}`);
-    console.log(`Description: ${data.description}`);
-    console.log(`Stars: ${data.stargazers_count}`);
+    console.log(`Repo Name: ${data.repo}`);
   } catch (error) {
-    console.error(`Error fetching data: ${error.message}`);
+    console.error(`Error fetching data`);
   }
   return (
     <><div>OctoKit Page</div></>
