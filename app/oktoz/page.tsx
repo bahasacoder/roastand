@@ -1,4 +1,4 @@
-import { Octokit } from "octokit";
+import { Octokit } from "octokit/rest";
 
 // Initialize client
 const octokit = new Octokit({ 
