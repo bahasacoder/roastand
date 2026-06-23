@@ -1,5 +1,4 @@
 import { Octokit } from "@octokit/rest";
-
 // Initialize client
 const octokit = new Octokit({ 
   auth:  process.env.GITHUB_TOKEN
@@ -11,6 +10,7 @@ export default async function getRepositoryData() {
     const { data } = await octokit.rest.repos.get({
       owner: "bahasacoder",
       repo: "reastand",
+      path: "db/items.json"
     });
 
     console.log(`Repo Name: ${data.repo}`);
