@@ -21,7 +21,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
     
    // return jsonObject;
   } catch (error) {
-    console.error("Error fetching or parsing JSON file:", error.message);
+    console.error("Error fetching or parsing JSON file:");
   }
 }
 
