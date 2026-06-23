@@ -3,8 +3,7 @@ import { Octokit } from '@octokit/rest';
 
 export default async function oktozPage() {
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
- try {
-    // 2. Request the file with the "raw" mediaType format
+
     const { data } = await octokit.rest.repos.getContent({
       owner: "bahasacoder",
       repo: "roastand",
@@ -14,19 +13,9 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
       },
     });
 
-    // 3. Parse the plain text string into a JSON object
-    //const jsonObject = JSON.parse(data);
-  // , jsonObject
     console.log("Successfully fetched JSON data:");
-    
-   // return jsonObject;
-  } catch (error) {
-    console.error("Error fetching or parsing JSON file:");
-  }
-}
-
-fetchJsonFile();
-
+ return ()
+}    
  /*
   const response = await octokit.rest.repos.getContent({
     mediaType: {
