@@ -14,7 +14,11 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
     });
 
     console.log("Successfully fetched JSON data:");
- return ()
+ return (
+     <>
+         <div>Octoz Page</div>
+     </>
+ )
 }    
  /*
   const response = await octokit.rest.repos.getContent({
