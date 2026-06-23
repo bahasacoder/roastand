@@ -18,7 +18,7 @@ export default async function getRepositoryData() {
     console.error(`Error fetching data`);
   }
   return (
-    <><div>OctoKit Page</div></>
+    <><div className="my-24 border-2">OctoKit Page</div></>
   )
 }
 
