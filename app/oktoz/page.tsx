@@ -41,12 +41,4 @@ fetchJsonFile();
     
 
 */
- return (
-   <>
-    <main className="mt-24">
-     <div>Oktoz Page</div>
-     </main>
-   </>
- )
-   
 }
