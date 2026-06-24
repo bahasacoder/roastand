@@ -7,7 +7,7 @@ const octokit = new Octokit({
 export default async function getRepositoryData() {
   try {
     // Fetch information for a specific repository
-    const { data } = await octokit.rest.repos.get({
+    const { data } = await octokit.rest.repos.getContent({
       owner: "bahasacoder",
       repo: "reastand",
       path: "db/items.json"
