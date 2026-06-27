@@ -5,7 +5,16 @@ const octokit = new Octokit({
 });
 
 export default async function getRepositoryData() {
+  
   const konsole = "baca console log disini";
+  const response = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+                    owner: 'bahasacoder',
+                    repo: 'roastand',
+                    path: 'db/items.json',
+                    headers: {
+                      'X-GitHub-Api-Version': '2026-03-10'
+                    }
+                  });
   
       console.log("Fetching data");
   
