@@ -5,18 +5,8 @@ const octokit = new Octokit({
 });
 
 export default async function getRepositoryData() {
-  try {
-    // Fetch information for a specific repository
-    const { data } = await octokit.rest.repos.getContent({
-      owner: "bahasacoder",
-      repo: "reastand",
-      path: "db/items.json"
-    });
-
-    console.log(`Repo Name: `);
-  } catch (error) {
-    console.error(`Error fetching data`);
-  }
+      console.log(`Fetching data`, auth);
+  
   return (
     <><div className="my-24 border-2">OctoKit Page</div></>
   )
