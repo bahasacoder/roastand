@@ -5,10 +5,15 @@ const octokit = new Octokit({
 });
 
 export default async function getRepositoryData() {
+  const konsole = "baca console log disini";
+  
       console.log("Fetching data");
   
   return (
-    <><div className="my-24 border-2">OctoKit Page Fetching data</div></>
+    <><div className="my-24 border-2">
+      <p>OctoKit Page Fetching data</p>
+      <p>{konsole}</p>
+    </div></>
   )
 }
 
