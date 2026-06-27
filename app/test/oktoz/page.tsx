@@ -5,10 +5,10 @@ const octokit = new Octokit({
 });
 
 export default async function getRepositoryData() {
-      console.log(`Fetching data`);
+      console.log("Fetching data");
   
   return (
-    <><div className="my-24 border-2">OctoKit Page Fetchin data</div></>
+    <><div className="my-24 border-2">OctoKit Page Fetching data</div></>
   )
 }
 
